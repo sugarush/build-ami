@@ -2,8 +2,8 @@
   "variables": {
     "region": "us-west-2",
     "subnet_id": "subnet-9a7150fc",
-    "source_ami": "ami-e8874f90",
-    "ami_name": "archlinux-{{isotime \"2006-01-02\"}}"
+    "source_ami": "ami-b514b6cd",
+    "ami_name": "archlinux-mariadb-{{isotime \"2006-01-02\"}}"
   },
   "builders": [
     {
@@ -25,15 +25,7 @@
   "provisioners": [
     {
       "type": "shell",
-      "inline": [
-        "pacman --noconfirm -Sy ansible git zsh",
-        "useradd -D -s /usr/bin/zsh",
-        "cd /etc",
-        "git clone \"https://github.com/luciferavada/satan-shell.git\"",
-        "cd /etc/satan-shell",
-        "./install.sh",
-        "chsh -s /usr/bin/zsh root"
-      ]
+      "script": "mariadb.sh"
     }
   ]
 }
