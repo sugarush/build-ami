@@ -1,7 +1,7 @@
 {
   "variables": {
     "region": "us-west-2",
-    "subnet_id": "subnet-9a7150fc",
+    "subnet_id": "subnet-50e2170a",
     "source_ami": "ami-b514b6cd",
     "ami_name": "archlinux-apache-{{isotime \"2006-01-02\"}}"
   },
