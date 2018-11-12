@@ -2,8 +2,8 @@
   "variables": {
     "region": "us-west-2",
     "subnet_id": "subnet-50e2170a",
-    "source_ami": "ami-da8224a2",
-    "ami_name": "archlinux-base-{{isotime \"2006-01-02\"}}"
+    "source_ami": "ami-86a806fe",
+    "ami_name": "archlinux-web-{{isotime \"2006-01-02\"}}"
   },
   "builders": [
     {
@@ -25,7 +25,7 @@
   "provisioners": [
     {
       "type": "shell",
-      "script": "base.sh"
+      "script": "web.sh"
     }
   ]
 }
